@@ -1,5 +1,4 @@
-/bootstrap/compiled.php
-/bootstrap/cache/
+ 
 .env
 .env.*.php
 .env.php
@@ -19,8 +18,7 @@ npm-debug.log
 yarn-error.log
 .DS_Store
 .idea/
-updates/
-composer.lock
+updates/ 
 *.lock
 resources/lang/en.json
 
