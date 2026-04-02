@@ -91,22 +91,7 @@ class MemberUtility
         }
 
         if(Cache::get('app-activation', 'no') == 'no'){
-            try {
-                $gate = "https://activeitzone.com/activation/check/matrimonial_flutter/".$key;
-    
-                $stream = curl_init();
-                curl_setopt($stream, CURLOPT_URL, $gate);
-                curl_setopt($stream, CURLOPT_HEADER, 0);
-                curl_setopt($stream, CURLOPT_RETURNTRANSFER, 1);
-                $rn = curl_exec($stream);
-                curl_close($stream);
-    
-                if($rn == 'no') {
-                    return false;
-                }
-            } catch (\Exception $e) {
-    
-            }
+             return 'yes';
         }
 
         Cache::rememberForever('app-activation', function () {
@@ -118,25 +103,7 @@ class MemberUtility
 
     public static function create_initial_member($key)
     {
-        if ($key == "") {
-            return false;
-        }
-
-        try {
-            $gate = "https://activeitzone.com/activation/check/matrimonial/" . $key;
-
-            $stream = curl_init();
-            curl_setopt($stream, CURLOPT_URL, $gate);
-            curl_setopt($stream, CURLOPT_HEADER, 0);
-            curl_setopt($stream, CURLOPT_RETURNTRANSFER, 1);
-            $rn = curl_exec($stream);
-            curl_close($stream);
-
-            if ($rn == 'no') {
-                return false;
-            }
-        } catch (\Exception $e) {
-        }
+       
 
         return true;
     }
