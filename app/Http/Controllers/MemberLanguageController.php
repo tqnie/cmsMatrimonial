@@ -71,8 +71,9 @@ class MemberLanguageController extends Controller
             return Redirect::back()->withErrors($validator);
         }
 
-        
-        if(MemberLanguage::create(['name' => $request->name])){
+        $language       = new MemberLanguage;
+        $language->name = $request->name;
+        if($language->save()){
             flash(translate('New language has been added successfully'))->success();
             return redirect()->route('member-languages.index');
         } else {
