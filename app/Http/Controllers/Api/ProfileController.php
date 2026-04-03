@@ -230,8 +230,8 @@ class ProfileController extends Controller
             $physical_attribute = new PhysicalAttribute;
             $physical_attribute->user_id = auth()->id();
         }
-        $physical_attribute->height        = $request->height;
-        $physical_attribute->weight        = $request->weight;
+        $physical_attribute->height        =(float) $request->height;
+        $physical_attribute->weight        =(float) $request->weight;
         $physical_attribute->eye_color     = $request->eye_color;
         $physical_attribute->hair_color    = $request->hair_color;
         $physical_attribute->complexion    = $request->complexion;
