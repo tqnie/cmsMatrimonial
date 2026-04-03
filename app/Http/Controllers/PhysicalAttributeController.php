@@ -118,8 +118,8 @@ class PhysicalAttributeController extends Controller
              $physical_attribute->user_id = $id;
          }
 
-         $physical_attribute->height        = floatval($request->height);
-         $physical_attribute->weight        = floatval($request->weight);
+         $physical_attribute->height        = number_format($request->height, 2);
+         $physical_attribute->weight        = number_format($request->weight, 2);
          $physical_attribute->eye_color     = $request->eye_color;
          $physical_attribute->hair_color    = $request->hair_color;
          $physical_attribute->complexion    = $request->complexion;
