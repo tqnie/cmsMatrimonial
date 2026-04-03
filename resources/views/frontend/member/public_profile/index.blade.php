@@ -3,7 +3,7 @@
     <section class="pt-6 bg-primary-grad text-white">
         <div class="container">
             <div class="row">
-                <div class="col-xl-8 offset-xl-4">
+                <div class="col-xl-8 ">
                     <div class="px-3 row align-items-center">
                         <div class="col-md-8 col-xxl-9">
                             <h1 class="fs-24 fw-600">
