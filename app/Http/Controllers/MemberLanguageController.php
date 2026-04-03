@@ -70,7 +70,7 @@ class MemberLanguageController extends Controller
             flash(translate('Sorry! Something went wrong'))->error();
             return Redirect::back()->withErrors($validator);
         }
-
+ 
         $language       = new MemberLanguage;
         $language->name = $request->name;
         if($language->save()){
